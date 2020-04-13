@@ -8,7 +8,7 @@ this commands gives you the installed version of the git in your machine.
 
   ### Create a Directory
  ```bash
-pip install foobar
+  mkdir <directory name>
 ```
   
   ### Change the Directory
