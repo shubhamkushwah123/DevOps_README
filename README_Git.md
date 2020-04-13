@@ -29,7 +29,7 @@ cd <directory name>
   git commit -m "commit message"
  ```
 
-  # git status : command gives us the name of the branch and list of files in staging area, which are not commited.
+  ## git status : command gives us the name of the branch and list of files in staging area, which are not commited.
 ```bash
  git status
  ```
@@ -44,6 +44,27 @@ cd <directory name>
    
    git config user.name = "Shubham"
    git config user.email = "shubham@gmail.com"
-   
-   
  ```
+ # Branching 
+ ## git branch : Checkout your current branch
+ ```bash
+    git branch
+    
+    git branch <branch name>  - > Creates the new branch
+ ```
+ 
+ ## git merge : Integrates the branch together
+ ```bash
+    git merge
+ ```
+ 
+ ## git checkout : Used to switch the branch
+ ```bash
+    git checkout
+ ```
+ 
+ ##
+ ```bash
+
+ ```
+ 
