@@ -1,16 +1,15 @@
 # DevOps
 DevOps Tools, Instructions.. etc
 
-## git init
-this command turns a directory into a Git Repository
-
 ## git --version
 this commands gives you the installed version of the git in your machine.
 
 ## Creating a git repository
 
   ### Create a Directory
- '''mkdir <directory name>'''
+ '''bash
+ mkdir <directory name>
+  '''
   
   ### Change the Directory
  '''cd <directory name>'''
@@ -26,4 +25,8 @@ this commands gives you the installed version of the git in your machine.
   
   ## git status
   this command gives us the name of the branch and list of files in staging area, which are not commited.
+  
+  ## git config
+  This command is used to configure the user details like username and email, which will be used during commit.
+  
   
