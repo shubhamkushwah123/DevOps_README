@@ -45,20 +45,24 @@ cd <directory name>     - To change the directory
     git branch    - List all the branches
     
     git branch <branch name>  - > Creates the new branch
- ```
- 
- ## git merge : Integrates the branch together
- ```bash
-    git merge
- ```
- 
- ## git checkout : Used to switch the branch
- ```bash
-    git checkout
- ```
- 
- ##
- ```bash
+    
+    git branch -D <branch name>   - > Deletes the branch
+    
+    git checkout <branch name>  - > Switch the branch from one branch to another
+    
+    git merge <branch name>  - > it has to run from master, it merges the another branch to master branch.
 
  ```
+ 
+ ## Connect and add Remote Repository.
+ ```bash
+ git remote add origin <ssh url>
+ git remote add origin
+ 
+ 
+ 
+ ```
+ 
+ 
+
  
