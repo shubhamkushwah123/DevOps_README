@@ -5,33 +5,25 @@ DevOps Tools, Instructions.. etc
 this commands gives you the installed version of the git in your machine.
 
 ## Creating a git repository
-
-  ### Create a Directory
  ```bash
-  mkdir <directory name>
+  mkdir <directory name>    - To create a directory
 ```
-  
-  ### Change the Directory
 ```bash
-cd <directory name>
+cd <directory name>     - To change the directory
  ``` 
-  ### Convert this directory into a empty git repository
+## Git Commands 
   ```bash
-  git init
+  git init      - converts a directory into a git repository
  ```
-  ## git add : it Adds single file to staging area or add all the files to staging area
   ```bash
-  git add fileName or git add .
+  git add fileName or git add .     - it Adds single file to staging area or add all the files to staging area
  ```
- 
-  ## git commit : it commits the changes from staging area to the local repository.
   ```bash
-  git commit -m "commit message"
+  git commit -m "commit message"    - It commits the changes with the message.
  ```
 
-  ## git status : command gives us the name of the branch and list of files in staging area, which are not commited.
 ```bash
- git status
+ git status     - gives the list of changes, which are staged but not commited.
  ```
 
 
@@ -45,10 +37,12 @@ cd <directory name>
    git config user.name = "Shubham"
    git config user.email = "shubham@gmail.com"
  ```
+ 
+ 
  # Branching 
  ## git branch : Checkout your current branch
  ```bash
-    git branch
+    git branch    - List all the branches
     
     git branch <branch name>  - > Creates the new branch
  ```
