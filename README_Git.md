@@ -7,9 +7,9 @@ this commands gives you the installed version of the git in your machine.
 ## Creating a git repository
 
   ### Create a Directory
- '''bash
- mkdir <directory name>
-  '''
+ ```bash
+pip install foobar
+```
   
   ### Change the Directory
  '''cd <directory name>'''
