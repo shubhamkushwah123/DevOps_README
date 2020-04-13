@@ -57,10 +57,29 @@ cd <directory name>     - To change the directory
  ## Connect and add Remote Repository.
  ```bash
  git remote add origin <ssh url>
- git remote add origin
+ git remote add origin https://github.com/shubhamkushwah123/DevOps.git
  
+ git clone <repo name>  - > Clones a remote repository to a local repository
+ git clone https://github.com/shubhamkushwah123/DevOps.git
  
+ git pull origin master   - > Pulls the changes from the remote master.
+ git push origion master  - > Pushes the changes commited to local repository to the remote repository
+  ```
+  
+  
+  
+  ## Advance git commands
+ ```bash
+ git stash    - > To save the changes, when they are not in  a state of commit.
+ git stash -u   - > Stash changes , clearing up the directory.
+ git stash list  - > List the stash created.
+ git stash apply  - > Brinch the work back.
  
+ git log   - > This gives context and history logs of a repository.
+ 
+ git rebase   - >  Copies and Stores a set of commit outside of our repository
+ 
+ git revert  - >  It rolls back the previous version of the file.
  ```
  
  
