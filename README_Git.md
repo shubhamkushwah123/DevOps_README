@@ -1,5 +1,4 @@
-# DevOps
-DevOps Tools, Instructions.. etc
+# Git Commands and Descriptions
 
 ## git --version
 this commands gives you the installed version of the git in your machine.
