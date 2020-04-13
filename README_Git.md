@@ -24,5 +24,6 @@ this commands gives you the installed version of the git in your machine.
   ## git commit -m "commit message"
   commits the changes from staging area to the local repository.
   
-  
+  ## git status
+  this command gives us the name of the branch and list of files in staging area, which are not commited.
   
