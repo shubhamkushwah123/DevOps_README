@@ -12,10 +12,13 @@ this commands gives you the installed version of the git in your machine.
 ```
   
   ### Change the Directory
- '''cd <directory name>'''
-  
+```bash
+cd <directory name>
+ ``` 
   ### Convert this directory into a empty git repository
+  ```bash
   git init
+ ```
   
   ## git add <file name> or git add .
   Add single file to staging area or add all the files to staging area
@@ -29,4 +32,12 @@ this commands gives you the installed version of the git in your machine.
   ## git config
   This command is used to configure the user details like username and email, which will be used during commit.
   
-  
+  ```bash
+   git config --global user.name = "Shubham"
+   git config --global user.email - "Shubham@gmail.com"
+   
+   git config user.name = "Shubham"
+   git config user.email = "shubham@gmail.com"
+   
+   
+ ```
