@@ -49,22 +49,6 @@ cd <directory name>     - To change the directory
    git config user.email = "shubham@gmail.com"
  ```
  
- 
- # Branching 
- ## git branch : Checkout your current branch
- ```bash
-    git branch    - List all the branches
-    
-    git branch <branch name>  - > Creates the new branch
-    
-    git branch -D <branch name>   - > Deletes the branch
-    
-    git checkout <branch name>  - > Switch the branch from one branch to another
-    
-    git merge <branch name>  - > it has to run from master, it merges the another branch to master branch.
-
- ```
- 
  ## Connect and add Remote Repository.
  ```bash
  git remote add origin <ssh url>
@@ -77,7 +61,20 @@ cd <directory name>     - To change the directory
  git push origion master  - > Pushes the changes commited to local repository to the remote repository
   ```
   
-  
+   # Branching 
+ ## git branch : Checkout your current branch
+ ```bash
+    git branch    - List all the branches
+    
+    git branch <branch name>  - > Creates the new branch
+    
+    git branch -d <branch name>   - > Deletes the branch
+    
+    git checkout <branch name>  - > Switch the branch from one branch to another
+    
+    git merge <branch name>  - > it has to run from master, it merges the another branch to master branch.
+
+ ```
   
   ## Advance git commands
  ```bash
