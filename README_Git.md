@@ -1,4 +1,4 @@
-#Git Installation
+# Git Installation
 To install git follow the instructions mentioned in the below url for Windows, Linux and Mac OS.
  ```bash
  https://www.atlassian.com/git/tutorials/install-git
