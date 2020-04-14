@@ -1,3 +1,15 @@
+#Git Installation
+To install git follow the instructions mentioned in the below url for Windows, Linux and Mac OS.
+ ```bash
+ https://www.atlassian.com/git/tutorials/install-git
+```
+Once the installation is done please follow the basic configuration as mentioned below.
+1) check git version > git --version
+2) configure username > git config --global user.name = "your name"
+3) configure email > git config --global user.email = "your email"
+
+You are ready to go !!!
+
 # Git Commands and Descriptions
 
 ## git --version
