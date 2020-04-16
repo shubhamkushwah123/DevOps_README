@@ -11,3 +11,22 @@
   > Follow the instructions at below link.
   
   https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/putty.html
+  
+  
+3) Run the below commands in sequence after connecting to amazon ec2 instance command line.
+ ```bash
+ sudo yum update
+ 
+ sudo yum install docker
+ 
+ sudo docker --version
+ 
+ sudo service docker status
+ 
+ sudo service docker start
+ 
+ sudo service docker status
+ 
+ sudo docker run -p 80:8888 shubhamkushwah123/my-test-app:1.0.0
+```
+
