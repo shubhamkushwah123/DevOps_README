@@ -4,20 +4,25 @@ Ansible Installation on Linux
 
 Note : Ansible needs python to be installed.
 
-2. Install Ansible
+2. Install Ansible on Linux distribution
 > sudo yum install python
+
 > sudo  yum install -y ansible
 
-3. Install Ansible on Mac
+3. Install Ansible on Mac OS.
+
 > pip install ansible
 
 4. Create a directory 
+
 > mkdir /etc/ansible
 
 5. Create a configuration file named "hosts"
+
 > vi hosts
 
 6. Add the following line
+
 > [server]
 > 18.222.176.34  ansible_ssh_private_key_file=/Users/shubham/Documents/aws-keys/devops-ec2.pem
 
@@ -29,19 +34,24 @@ while launching the ec2 instance.
 > ansible all -m ping -u ec2-user
 
 8. Running Ansible playbook
+
 In order to run ansible playbook, please make sure you have installed the python boto package in your system. it offers
 the packages for aws connectivity.
 
 To Install Boto3
+
  > pip Install boto3
  
 9 Post installation of boto, go to user home directory /Users/<UserName Directory>/ and create a file as below.
+ 
 > vi .boto
 
 10. Add the following linds and credentials provided by AWS and save.
 
 > [Credentials]
+
 > aws_access_key_id=Access key provided by AWS
+
 > aws_secret_access_key=Access key secret provided by AWS
 
 # Ansible Playbooks 
