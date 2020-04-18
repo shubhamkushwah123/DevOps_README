@@ -30,3 +30,10 @@
  sudo docker run -p 80:8888 shubhamkushwah123/my-test-app:1.0.0
 ```
 
+
+## AWS CLI Commands
+> aws ec2 describe-instances --query 'Reservations[*].Instances[*].PublicIpAddress[]'
+[
+    "18.219.88.72",
+    "3.12.102.199"
+]
