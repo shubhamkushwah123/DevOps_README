@@ -33,7 +33,9 @@
 
 ## AWS CLI Commands
 > aws ec2 describe-instances --query 'Reservations[*].Instances[*].PublicIpAddress[]'
+
 [
     "18.219.88.72",
+    
     "3.12.102.199"
 ]
