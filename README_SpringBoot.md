@@ -35,6 +35,8 @@ Pre-requisite : Ecipse, Java 1.8 and Maven 3.x needs to installed and path varia
 
 
 3. Create a class named Application in root package as mentioned below : 
+> Application class needs to be annotated with @SpringBootApplication annotation.
+
 ```bash
 package com;
 
