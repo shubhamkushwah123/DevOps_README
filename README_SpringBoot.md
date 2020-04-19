@@ -39,25 +39,36 @@ Pre-requisite : Ecipse, Java 1.8 and Maven 3.x needs to installed and path varia
 
 ```bash
 
-	package com;
+package com;
 
-	import org.slf4j.Logger;
-	import org.slf4j.LoggerFactory;
-	import org.springframework.boot.SpringApplication;
-	import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+@SpringBootApplication
+public class Application {
+	private static final Logger log = LoggerFactory.getLogger(Application.class);
 
-
-	@SpringBootApplication
-	public class Application {
-
-		private static final Logger log = LoggerFactory.getLogger(Application.class);
-
-		public static void main(String[] args) {
-			log.info("Main method has been invoked");
-			SpringApplication.run(Application.class,args);
-		}
-
-
+	public static void main(String[] args) {
+		log.info("Main method has been invoked");
+		SpringApplication.run(Application.class,args);
 	}
+}
+```
+
+4. Create a file index.html in webapp directory of application and paste the below content.
+
+```bash
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>DevOps World</title>
+
+</head>
+<body style="background-color:aqua;text-align:center">
+<h1>Congratulations!!! Welcome to the World of DevOps</h1>
+</body>
+</html>
 ```
