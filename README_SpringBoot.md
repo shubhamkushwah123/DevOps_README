@@ -38,28 +38,17 @@ Pre-requisite : Ecipse, Java 1.8 and Maven 3.x needs to installed and path varia
 ```bash
 package com;
 
-import java.net.InetAddress;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.web.bind.annotation.RequestMapping;
 
 
 
 	@SpringBootApplication
 	public class Application {
 
-		  private static final Logger log = LoggerFactory.getLogger(Application.class);
-
-		@RequestMapping("/")
-	    public String home() throws Exception {
-			log.info("Default / endpoint is called");
-			log.debug("Default Home is executing");
-			InetAddress machine = InetAddress.getLocalHost();
-		return "Congratulations, You were able to run me successfully on " + machine;
-	    }
+		private static final Logger log = LoggerFactory.getLogger(Application.class);
 
 		public static void main(String[] args) {
 			log.info("Main method has been invoked");
