@@ -73,3 +73,6 @@ public class Application {
 </body>
 </html>
 ```
+
+5. Right click on Application class and Run as Java Application.
+> open your browser and type http://localhost:8080
