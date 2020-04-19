@@ -10,7 +10,7 @@ Eclipse Neon or above , Java 1.8 and Maven 3.x needs to installed and path varia
 <version>0.0.1-SNAPSHOT</version>
  ```
 
-2. open the pom.xml and add the following lines.
+2. open the pom.xml and add the following lines inside project tag.
 ```bash
 <parent>
 <groupId>org.springframework.boot</groupId>
