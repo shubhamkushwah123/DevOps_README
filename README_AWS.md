@@ -32,10 +32,10 @@
 
 
 ## AWS CLI Commands
+
+> aws configure
+
 > aws ec2 describe-instances --query 'Reservations[*].Instances[*].PublicIpAddress[]'
 
-[
-    "18.219.88.72",
-    
-    "3.12.102.199"
-]
+> aws ec2 start-instances --instance-id i-03f05f9b0b1fd768d
+
