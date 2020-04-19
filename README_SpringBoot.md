@@ -1,7 +1,7 @@
 # Instructions to create a SpringBoot Application
 
-###Pre-requisite : 
-Ecipse, Java 1.8 and Maven 3.x needs to installed and path variable must be configured.
+### Pre-requisite : 
+Eclipse Neon or above , Java 1.8 and Maven 3.x needs to installed and path variable must be configured.
 
 1. Create a Maven Project in Eclipse > Skip Archetype Selection > Provide Archetype details manually.
 ```bash
