@@ -38,12 +38,13 @@ Pre-requisite : Ecipse, Java 1.8 and Maven 3.x needs to installed and path varia
 > Application class needs to be annotated with @SpringBootApplication annotation.
 
 ```bash
-package com;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+	package com;
+
+	import org.slf4j.Logger;
+	import org.slf4j.LoggerFactory;
+	import org.springframework.boot.SpringApplication;
+	import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 
 
