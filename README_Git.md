@@ -17,31 +17,41 @@ You are ready to go !!!
 this commands gives you the installed version of the git in your machine.
 
 ## Creating a git repository
+> To create a directory
  ```bash
-  mkdir <directory name>    - To create a directory
+  mkdir <directory name>
+  
 ```
+> To Change the directory
 ```bash
-cd <directory name>     - To change the directory
+cd <directory name>
+
  ``` 
 ## Git Commands 
+> Converts a directory into a local git repository.
   ```bash
   git init      - converts a directory into a git repository
  ```
+ 
+ > To add a single or muiltiple files to staging area
   ```bash
-  git add fileName or git add .     - it Adds single file to staging area or add all the files to staging area
- ```
-  ```bash
-  git commit -m "commit message"    - It commits the changes with the message.
- ```
-
-```bash
- git status     - gives the list of changes, which are staged but not commited.
- ```
-
-
-
-  ## git config: This command is used to configure the user details like username and email, which will be used during commit.
+  git add fileName or git add .  
   
+ ```
+ 
+ > To commit the changes in the local repository.
+  ```bash
+  git commit -m "commit message" 
+ ```
+
+> To list the status of the files in staging area.
+```bash
+ git status  
+ ```
+
+
+> To configure the global username and email id
+
   ```bash
    git config --global user.name = "Shubham"
    git config --global user.email - "Shubham@gmail.com"
@@ -50,46 +60,87 @@ cd <directory name>     - To change the directory
    git config user.email = "shubham@gmail.com"
  ```
  
- ## Connect and add Remote Repository.
+### Connect and add Remote Repository.
+ > To connect a local repository to a specific remote repository.
  ```bash
  git remote add origin <ssh url>
  git remote add origin https://github.com/shubhamkushwah123/DevOps.git
+```
  
- git clone <repo name>  - > Clones a remote repository to a local repository
+> To Clone a remote git repository into a local git repository.
+```bash
+ git clone <repo name> 
  git clone https://github.com/shubhamkushwah123/DevOps.git
- 
- git pull origin master   - > Pulls the changes from the remote master.
- git push origion master  - > Pushes the changes commited to local repository to the remote repository
-  ```
-  
-   # Branching 
- ## git branch : Checkout your current branch
- ```bash
-    git branch    - List all the branches
-    
-    git branch <branch name>  - > Creates the new branch
-    
-    git branch -d <branch name>   - > Deletes the branch
-    
-    git checkout <branch name>  - > Switch the branch from one branch to another
-    
-    git merge <branch name>  - > it has to run from master, it merges the another branch to master branch.
+```
 
- ```
+> To Pull the changes from master branch of the remote git repository.
+```bash
+git pull origin master 
+```
+ 
+> To Push the changes to master branch of the remote git repository.
+```bash
+git push origin master 
+```
   
-  ## Advance git commands
+### Branching 
+
+> To List all the branches
+```bash
+git branch
+```
+
+> To create a new branch
+```bash
+git branch $branchName
+```
+
+> To delete an existing branch 
+```bash
+git branch -d $branchName
+```
+
+> To merge a child branch to master
+```bash
+git merge $branchName
+```
+  
+### Advance git commands
+> To save the changes, when they are not in state of commit.
+```bash
+git stash
+```
+
+> To stash changes and clearing up the directory
+```bash
+git stash -u
+```
+
+> To List the stashes created.
+```bash
+git stash list
+```
+
+> To get the stashed work back.
+```bash
+git stash apply
+```
+
+> To get the context and history of logs of a repository
+```bash
+git log
+```
+ 
+ > To Copy and Store a set of commit outside of our repository.
  ```bash
- git stash    - > To save the changes, when they are not in  a state of commit.
- git stash -u   - > Stash changes , clearing up the directory.
- git stash list  - > List the stash created.
- git stash apply  - > Brinch the work back.
- 
- git log   - > This gives context and history logs of a repository.
- 
- git rebase   - >  Copies and Stores a set of commit outside of our repository
- 
- git revert  - >  It rolls back the previous version of the file.
- ```
+git rebase
+```
+
+> To revert back to the previous version of the file.
+```bash
+git revert
+```
+
  
  
 
