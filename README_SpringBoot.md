@@ -99,7 +99,7 @@ git push origin master
 Note : Check the repository in github.com, Your application code should be there in your github repository.
 
 
-## Creating Jenkins Pipeline
+### 4. Creating Jenkins Pipeline
 
 > 1. To Launch the Jenkins, Go to the folder, where jenkins.war is placed and run below command.
 ```bash
