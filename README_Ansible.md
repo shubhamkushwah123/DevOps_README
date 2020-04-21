@@ -62,6 +62,23 @@ To Install Boto3
  12 Create a ansible playbook file using below command.
  
  > vi task.yml
+ ```bash
+ - name : ec2-launcher
+  hosts : localhost
+  connection : local
+  tasks :
+  - name : launch ec2
+    ec2 : 
+     instance_type : t2.micro
+     key_name : devops-ec2
+     image : ami-097834fcb3081f51a
+     region : us-east-2
+     group : launch-wizard-1
+     count : 1
+     vpc_subnet_id : subnet-9f5562e5
+     wait : yes
+     assign_public_ip : yes
+```
  
  13 To run the ansible playbook, execute below command.
  
