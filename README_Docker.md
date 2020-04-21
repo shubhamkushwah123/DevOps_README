@@ -29,61 +29,66 @@ https://hub.docker.com/
 
 ## Docker Commands
 
- ```bash
-  
- ```
-> To check Docker Version :
+> 1. To check Docker Version :
  ```bash
   docker --version
  ```
-> To Start the Docker on Linux : 
+ 
+> 2. To Start the Docker on Linux : 
 ```bash
   docker service docker start
  ```
-> To Stop the Docker on Linux : 
+ 
+> 3. To Stop the Docker on Linux : 
 ```bash
   docker service docker stop
  ```
-> To check the running containers :
+ 
+> 4. To check the running containers :
 ```bash
   docker ps
  ```
-> To check all the containers (running and terminated)
+ 
+> 5. To check all the containers (running and terminated) :
 ```bash
   docker ps -a
  ```
-> To check docker images : 
+ 
+> 6. To check docker images : 
 ```bash
   docker image
  ```
-> To remove an docker image :
+ 
+> 7. To remove an docker image :
 ```bash
   docker rmi $image_id
  ```
-> To build a docker image from Dockerfile : 
+ 
+> 8. To build a docker image from Dockerfile : 
 ```bash
   docker build 
   docker build -t $imageName:tagName
   docker build -t my-test-app:1.0.0
  ```
- > To Login to Docker Hub Repository : 
+ 
+ > 9. To Login to Docker Hub Repository : 
   ```bash
   docker login
  ```
  
- > To Push an image to DockerHub Repository
+ > 10. To Push an image to DockerHub Repository :
   ```bash
   docker push $dockerHubId/$imageId:$tagName
   docker push shubhamkushwah123/my-test-app:1.0.0
  ```
  
- > To Pull an image from DockerHub Repository
+ > 11. To Pull an image from DockerHub Repository :
   ```bash
   docker pull $dockerHubId/$imageId:$tagName
   docker pull shubhamkushwah123/my-test-app:1.0.0
  ```
  
- > To Run an Docker image 
+ > 12. To Run an Docker image :
   ```bash
   docker run -p $entryPort:$PortToBeMapped -d $dockerId/$imageId:$tagName
   docker run -p 8888:8080 -d shubhamkushwah123/my-test-app:1.0.0
