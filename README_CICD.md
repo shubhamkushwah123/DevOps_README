@@ -8,50 +8,9 @@
 4. Jenkins latest
 
 ### 1. Create an Spring Boot Application
-> 1. Open Eclipse and Create an Workspace.
+> Follow the instructions at below link to create an Spring Boot Application.
 
-> 2. File > New > Maven Project > Check (Skip Archetype selection) > Next > 
-
-> 3. Provide the below details and Click on Finish.
-```bash
-Group Id : org.devops
-Artifact Id : cicd-pipeline
-Version : <keep it same>
-Packaging = jar
-```
-> 4. A project will be created, open pom.xml and make it like this.
-```bash
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>org.devops</groupId>
-  <artifactId>devops-test-app</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  
-    <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.0.3.RELEASE</version>
-        <relativePath />
-    </parent>
-  
-<dependencies>
-	 <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
-</dependencies>
-
-<properties>
-	 <java.version>1.8</java.version>
-</properties>
-  
-</project>
-```
+https://github.com/shubhamkushwah123/DevOps_README/blob/master/README_SpringBoot.md
 
 
 ### 2. Build and Test the Application using MAVEN.
@@ -100,3 +59,48 @@ git push origin master
 ```
 
 Note : Check the repository in github.com, Your application code should be there in your github repository.
+
+
+### 4. Creating Jenkins Pipeline.
+
+
+> 1. To Launch the Jenkins, Go to the folder, where jenkins.war is placed and run below command.
+```bash
+java -jar jenkins.war
+```
+
+> 2. Go the browser and open http://localhost:8080
+
+> 3. Login with the admin user and password that you have created during first login after installation process.
+
+Note : if not, please follow steps at > https://www.guru99.com/download-install-jenkins.html
+
+> 4. Click on New Item > Choose Pipeline Project > Give any name (e.g. ci-pipeline) > hit Enter.
+
+> 5. Click on configure > Click on the last tab Pipeline.
+Note : Pipeline scripts needs to be written in groovy script. a template is shown below.
+
+```bash
+node{
+	stage('git checkout'){
+		// code for checkout
+	}
+	
+	stage('mvn build'){
+		// code for build
+	}
+	
+	stage('mvn test'){
+		// code for test
+	}
+	
+	stage('mvn install'){
+		// code for install
+	}
+}
+```
+
+> 6. Once the pipeline code is done, Please click on save and Build Now.
+
+> 7. If it is a blue button, it means success, if it's a red button means fail. Click on the button to see the logs to identify errors.
+
