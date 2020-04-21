@@ -16,6 +16,7 @@ Artifact Id : cicd-pipeline
 Version : <keep it same>
 Packaging = jar
 ```
+
 > 4. A project will be created, open pom.xml and make it like this.
 ```bash
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -49,70 +50,6 @@ Packaging = jar
   
 </project>
 ```
-
-
-### 2. Build and Test the Application using MAVEN.
-
-> 1. Open the Command Prompt and check maven installation.
-
-```bash
-mvn --version
-```
-
-> 2. Navigate to the project folder, where pom.xml resides and run below command to build the application.
-
-```bash
-mvn clean test install
-```
-
-### 3. Upload the Code to the GitHub Repository.
-
-> 1. Create an account on https://www.github.com
-
-> 2. Login to the Account.
-
-> 3. Create a public repository.
-
-> 4. Copy the repository url to clone. (e.g. It looks like this : https://github.com/shubhamkushwah123/DevOps.git)
-
-> 5. Open command prompt in your machine and navigate to the project folder, where pom.xml resides.
-
-> 6. Initializes the local git repository. (Inside the project folder, run below command)
-
-```bash
-git init
-
-git config --global user.name = "your name"
-
-git config --global user.email - "your email address that you have used to login to github"
-
-git add .
-
-git commit -m "Code commited to local repository"
-
-git remote add origion <the git repository url that you have copied into the above steps>
-git remote add origin https://github.com/shubhamkushwah123/DevOps.git
-
-git push origin master
-```
-
-Note : Check the repository in github.com, Your application code should be there in your github repository.
-
-
-### 4. Creating Jenkins Pipeline
-
-> 1. To Launch the Jenkins, Go to the folder, where jenkins.war is placed and run below command.
-```bash
-java -jar jenkins.war
-```
-
-> 2. Go the browser and open http://localhost:8080
-
-> 3. Login with the admin user and password that you have created during first login after installation process.
-
-Note : if not, please follow steps at > https://www.guru99.com/download-install-jenkins.html
-
-> 4. Click on New Item > Choose Pipeline Project > Give any name (e.g. ci-pipeline) > hit Enter.
 
 > 5. Create a class named Application in root package as mentioned below : 
 
@@ -155,5 +92,6 @@ public class Application {
 ```
 
 > 7. Right click on Application class and Run as Java Application.
+
 
 Note : open your browser and type http://localhost:8080
