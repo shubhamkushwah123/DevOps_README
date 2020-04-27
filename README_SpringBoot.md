@@ -75,7 +75,7 @@ public class Application {
 }
 ```
 
-> 6. Create a file index.html in webapp directory of application and paste the below content.
+> 6. Create a directory named "static" in src/main/resources folder and then create index.html file inside static folder and then paste the below content.
 
 ```bash
 <!DOCTYPE html>
