@@ -10,14 +10,15 @@ Note : Follow the instructions after completing the instructions of README_Sprin
   <groupId>org.devops</groupId>
   <artifactId>cicd-pipeline</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  	<parent>
+  
+    <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.1.7.RELEASE</version>
         <relativePath />
     </parent>
   
-<dependencies>
+     <dependencies>
 	 <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -27,29 +28,29 @@ Note : Follow the instructions after completing the instructions of README_Sprin
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
              <exclusions>
-			    <exclusion>
-			      <groupId>junit</groupId>
-			      <artifactId>junit</artifactId>
-			    </exclusion>
-			  </exclusions>
+		    <exclusion>
+		      <groupId>junit</groupId>
+		      <artifactId>junit</artifactId>
+		    </exclusion>
+	     </exclusions>
         </dependency>
-	  <dependency>
-		  <groupId>org.junit.jupiter</groupId>
-		  <artifactId>junit-jupiter-api</artifactId>
-		  <version>5.3.2</version>
-		  <scope>test</scope>
-		</dependency>
-		<dependency>
-		  <groupId>org.junit.jupiter</groupId>
-		  <artifactId>junit-jupiter-engine</artifactId>
-		  <version>5.3.2</version>
-		  <scope>test</scope>
-		</dependency>
-</dependencies>
+	<dependency>
+	  <groupId>org.junit.jupiter</groupId>
+	  <artifactId>junit-jupiter-api</artifactId>
+	  <version>5.3.2</version>
+	  <scope>test</scope>
+	</dependency>
+	<dependency>
+	  <groupId>org.junit.jupiter</groupId>
+	  <artifactId>junit-jupiter-engine</artifactId>
+	  <version>5.3.2</version>
+	  <scope>test</scope>
+	</dependency>
+      </dependencies>
 
-<properties>
-    <maven.compiler.source>1.8</maven.compiler.source>
-</properties>
+	<properties>
+	    <maven.compiler.source>1.8</maven.compiler.source>
+	</properties>
    
 </project>
 ```
