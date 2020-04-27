@@ -98,4 +98,11 @@ public class MessageServiceTest {
 	
 }
 
+
+```
+
+
+> 4. Run the Unit test cases with Maven.
+```bash
+mvn clean test
 ```
