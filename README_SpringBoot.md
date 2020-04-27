@@ -25,10 +25,10 @@ Packaging = jar
   <artifactId>devops-test-app</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   
-    <parent>
+     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.0.3.RELEASE</version>
+        <version>2.1.7.RELEASE</version>
         <relativePath />
     </parent>
   
