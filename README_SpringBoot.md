@@ -91,7 +91,12 @@ public class Application {
 </html>
 ```
 
-> 7. Right click on Application class and Run as Java Application.
+> 7. Run Below commands to run the application.
 
+
+```bash
+mvn package spring-boot:repackage
+java -jar /target/*.jar
+```
 
 Note : open your browser and type http://localhost:8080
