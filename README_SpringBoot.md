@@ -44,6 +44,23 @@ Packaging = jar
         </dependency>
 </dependencies>
 
+ <build>
+	    <plugins>
+	        <plugin>
+	            <groupId>org.springframework.boot</groupId>
+	            <artifactId>spring-boot-maven-plugin</artifactId>
+	            <version>2.1.7.RELEASE</version>
+	            <executions>
+	                <execution>
+	                    <goals>
+	                        <goal>repackage</goal>
+	                    </goals>
+	                </execution>
+	            </executions>
+	        </plugin>
+	    </plugins>
+</build>
+
 <properties>
 	 <java.version>1.8</java.version>
 </properties>
