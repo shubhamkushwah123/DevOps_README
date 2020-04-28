@@ -105,3 +105,93 @@ https://hub.docker.com/
    docker run -p 8888:8080 -d shubhamkushwah123/my-test-app:1.0.0
    
  ```
+
+## Dockerfile Keywords
+
+> 1. FROM : It tells docker from which base image, you want to create your image from.
+Usage : 
+```bash
+FROM <image>
+FROM <image>:<tag>
+```
+> 2. RUN : This command is used to run the instructions against the image. 
+Usage : 
+```bash
+RUN <command>
+```
+> 3. CMD : CMD is used to provide default arguments for the ENTRYPOINT instruction, both the CMD and ENTRYPOINT instructions should be specified with the JSON array format.
+Note : Please note that there can only be one CMD in a Dockerfile.
+Usage : 
+```bash
+CMD <command> <param1> <param2> (shell form)
+```
+
+> 4. MAINTAINER : It is used to specify the maintainer of the Dockerfile. In our case, we just specify the email id.
+Usage : 
+```bash
+MAINTAINER <name>
+```
+
+> 5. ADD : Adds new files, directories, or remote file URLs from <src> and adds them to the filesystem of the image at the path <dest>.
+Usage : 
+ 
+```bash
+ADD <src>  <dest>
+```
+
+> 6. ENTRYPOINT : Allows you to configure a container that will run as an executable.
+Usage : 
+
+```bash
+ENTRYPOINT <command> <param1> <param2> (shell form)
+```
+
+> 7. ENV : The ENV instruction sets the environment variable <key> to the value <value>.
+Usage : 
+ 
+```bash
+ENV <key> <value>
+```
+
+> 8. EXPOSE : It Informs Docker that the container listens on the specified network port(s) at runtime.
+Usage : 
+
+```bash
+EXPOSE <port> [<port> ...]
+```
+
+> 9. USER : The USER instruction sets the user name or UID to use when running the image and for any RUN, CMD and ENTRYPOINT instructions that follow it in the Dockerfile.
+Usage : 
+
+```bash
+USER <username | UID>
+```
+
+> 10. VOL : Creates a mount point with the specified name and marks it as holding externally mounted volumes from native host or other containers.
+Usage : 
+
+```bash
+VOLUME <path>
+```
+
+> 11. COPY : Copies new files or directories from <src> and adds them to the filesystem of the image at the path <dest>.
+Usage : 
+ 
+```bash
+COPY <src> [<src> ...] <dest>
+```
+
+> 12. WORKDIR : Sets the working directory for any RUN, CMD, ENTRYPOINT, COPY, and ADD instructions that follow it.
+Usage : 
+
+```bash
+WORKDIR </path/to/workdir>
+```
+
+> 13. ARG : Defines a variable that users can pass at build-time to the builder with the docker build command.
+Usage : 
+
+```bash
+ARG <name>[=<default value>]
+```
+
