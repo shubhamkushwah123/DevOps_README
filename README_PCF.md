@@ -14,10 +14,15 @@ https://run.pivotal.io/
 
 > Configure CLI : 
 cf login
+
   API End : https://api.run.pivotal.io
+  
   email : xxx@gmail.com
+  
   password : ********
+  
   org : devops-project
+  
   space : development
   
 
