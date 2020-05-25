@@ -26,7 +26,7 @@ cf login
 
 > cf push <app_name> -p <jar/war name> : To push the application to Cloud Foundary Server.
 
-  cf push my-test-app -p my-test-app-1.0.0-SNAPSHOT.jar
+> example : cf push my-test-app -p my-test-app-1.0.0-SNAPSHOT.jar
   
   
 > cf delete -r <app_name> : To delete the app from Cloud Foundary Server
