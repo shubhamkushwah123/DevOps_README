@@ -37,13 +37,13 @@ https://hub.docker.com/
  
 > 2. To Start the Docker on Linux : 
 ```bash
-  docker service docker start
+  sudo service docker start
   
  ```
  
 > 3. To Stop the Docker on Linux : 
 ```bash
-  docker service docker stop
+  sudo service docker stop
   
  ```
  
