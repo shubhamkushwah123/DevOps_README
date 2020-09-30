@@ -217,3 +217,16 @@ ENTRYPOINT ["java", "-jar", "app.jar"]
 MAINTAINER "shubhamkushwah123@gmail.com"
 ```
 
+
+# Docker Networking : 
+
+1. Every installation of the Docker Engine automatically includes three default networks. You can list them:
+
+```
+$ docker network ls
+
+NETWORK ID          NAME                DRIVER
+18a2866682b8        none                null
+c288470c46f6        host                host
+7b369448dccb        bridge              bridge
+```
