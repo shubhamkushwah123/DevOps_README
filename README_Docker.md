@@ -230,3 +230,30 @@ NETWORK ID          NAME                DRIVER
 c288470c46f6        host                host
 7b369448dccb        bridge              bridge
 ```
+
+
+2. The network named bridge is a special network. Unless you tell it otherwise, Docker always launches your containers in this network. Try this now:
+```
+$ docker run -itd --name=networktest ubuntu
+
+74695c9cea6d9810718fddadc01a727a5dd3ce6a69d09752239736c030599741
+```
+
+3. Inspecting the network is an easy way to find out the container’s IP address.
+```
+$ docker network inspect bridge
+```
+
+4. You can remove a container from a network by disconnecting the container. To do this, you supply both the network name and the container name. You can also use the container ID. In this example, though, the name is faster.
+```
+$ docker network disconnect bridge networktest
+```
+
+While you can disconnect a container from a network, you cannot remove the builtin bridge network named bridge. Networks are natural ways to isolate containers from other containers or other networks. So, as you get more experienced with Docker, create your own networks.
+
+
+## Create your own bridge network
+```
+$ docker network create -d bridge my_bridge
+```
+The -d flag tells Docker to use the bridge driver for the new network. You could have left this flag off as bridge is the default value for this flag.
