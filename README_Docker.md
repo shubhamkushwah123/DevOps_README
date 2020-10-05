@@ -262,3 +262,37 @@ The -d flag tells Docker to use the bridge driver for the new network. You could
 # Docker Mysql Container Connection :
 
 https://phoenixnap.com/kb/mysql-docker-container
+
+
+# Docker Compose file : 
+```
+version: '3'
+services:
+  docker-mysql:
+    restart: always
+    container_name: docker-mysql
+    image: mysql
+    environment:
+      MYSQL_DATABASE: book_manager
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_ROOT_HOST: '%'
+    volumes:
+      - ./sql:/docker-entrypoint-initdb.d
+    ports:
+      - "6033:3306"
+    healthcheck:
+      test: "/usr/bin/mysql --user=root --password=root--execute \"SHOW DATABASES;\""
+      interval: 2s
+      timeout: 20s
+      retries: 10
+  my-app:
+    restart: on-failure
+    build: ./
+    ports:
+    - 8888:8080
+    environment:
+      WAIT_HOSTS: mysql:3306
+    depends_on:
+    - docker-mysql
+```
+
