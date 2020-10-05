@@ -259,6 +259,6 @@ $ docker network create -d bridge my_bridge
 The -d flag tells Docker to use the bridge driver for the new network. You could have left this flag off as bridge is the default value for this flag.
 
 
-#Docker Mysql Container Connection :
+# Docker Mysql Container Connection :
 
 https://phoenixnap.com/kb/mysql-docker-container
