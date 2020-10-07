@@ -8,8 +8,8 @@
 
 Once the installation is ready, try out few commands mentioned below : 
 ```bash
-minikube version
-
+ > minikube version
+```
 OK, we can see that minikube is in place.
 
 Start the cluster, by running the minikube start command:
