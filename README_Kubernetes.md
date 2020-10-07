@@ -102,3 +102,11 @@ Note: Check the top of the terminal. The proxy was run in a new tab (Terminal 2)
 
 In order for the new deployment to be accessible without using the Proxy, a Service is required which will be explained in the next modules.
 
+> View the container logs : 
+
+View the container logs
+Anything that the application would normally send to STDOUT becomes logs for the container within the Pod. We can retrieve these logs using the kubectl logs command:
+```
+kubectl logs $POD_NAME
+```
+Note: We don’t need to specify the container name, because we only have one container inside the pod.
