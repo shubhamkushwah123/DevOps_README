@@ -8,7 +8,7 @@
 
 Once the installation is ready, try out few commands mentioned below : 
 ```bash
- > minikube version
+ minikube version
 ```
 OK, we can see that minikube is in place.
 
@@ -35,5 +35,6 @@ During this tutorial, we’ll be focusing on the command line for deploying and 
 kubectl get nodes
 ```
 This command shows all nodes that can be used to host our applications. Now we have only one node, and we can see that its status is ready (it is ready to accept applications for deployment).
+
 
 
