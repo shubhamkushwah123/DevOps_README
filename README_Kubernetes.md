@@ -78,7 +78,7 @@ The kubectl command can create a proxy that will forward communications into the
 
 We will open a second terminal window to run the proxy.
 ```
-echo -e "\n\n\n\e[92mStarting Proxy. After starting it will not output a response. Please click the first Terminal Tab\n"; 
+echo -e "\n\n\nStarting Proxy. After starting it will not output a response. Please click the first Terminal Tab\n"; 
 
 kubectl proxy
 ```
