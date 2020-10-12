@@ -217,6 +217,41 @@ ENTRYPOINT ["java", "-jar", "app.jar"]
 MAINTAINER "shubhamkushwah123@gmail.com"
 ```
 
+# Docker Compose file : 
+```
+version: '3'
+services:
+  docker-mysql:
+    restart: always
+    container_name: docker-mysql
+    image: mysql
+    environment:
+      MYSQL_DATABASE: book_manager
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_ROOT_HOST: '%'
+    volumes:
+      - ./sql:/docker-entrypoint-initdb.d
+    ports:
+      - "6033:3306"
+    healthcheck:
+      test: "/usr/bin/mysql --user=root --password=root--execute \"SHOW DATABASES;\""
+      interval: 2s
+      timeout: 20s
+      retries: 10
+  my-app:
+    restart: on-failure
+    build: ./
+    ports:
+    - 8888:8080
+    environment:
+      WAIT_HOSTS: mysql:3306
+    depends_on:
+    - docker-mysql
+```
+
+# Docker Mysql Container Connection :
+
+https://phoenixnap.com/kb/mysql-docker-container
 
 # Docker Networking : 
 
@@ -258,41 +293,28 @@ $ docker network create -d bridge my_bridge
 ```
 The -d flag tells Docker to use the bridge driver for the new network. You could have left this flag off as bridge is the default value for this flag.
 
-
-# Docker Mysql Container Connection :
-
-https://phoenixnap.com/kb/mysql-docker-container
-
-
-# Docker Compose file : 
+Use the docker network rm command to remove a user-defined bridge network. If containers are currently connected to the network, disconnect them first.
 ```
-version: '3'
-services:
-  docker-mysql:
-    restart: always
-    container_name: docker-mysql
-    image: mysql
-    environment:
-      MYSQL_DATABASE: book_manager
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_ROOT_HOST: '%'
-    volumes:
-      - ./sql:/docker-entrypoint-initdb.d
-    ports:
-      - "6033:3306"
-    healthcheck:
-      test: "/usr/bin/mysql --user=root --password=root--execute \"SHOW DATABASES;\""
-      interval: 2s
-      timeout: 20s
-      retries: 10
-  my-app:
-    restart: on-failure
-    build: ./
-    ports:
-    - 8888:8080
-    environment:
-      WAIT_HOSTS: mysql:3306
-    depends_on:
-    - docker-mysql
+$ docker network rm my_bridge
 ```
+
+## Connect a container to a user-defined bridge🔗
+
+When you create a new container, you can specify one or more --network flags. This example connects a Nginx container to the my-net network. It also publishes port 80 in the container to port 8080 on the Docker host, so external clients can access that port. Any other container connected to the my-net network has access to all ports on the my-nginx container, and vice versa.
+```
+$ docker create --name my-nginx \
+  --network my-net \
+  --publish 8080:80 \
+  nginx:latest
+  ```
+To connect a running container to an existing user-defined bridge, use the docker network connect command. The following command connects an already-running my-nginx container to an already-existing my-net network:
+```
+$ docker network connect my-net my-nginx
+```
+To disconnect a running container from a user-defined bridge, use the docker network disconnect command. The following command disconnects the my-nginx container from the my-net network.
+```
+$ docker network disconnect my-net my-nginx
+```
+
+
 
