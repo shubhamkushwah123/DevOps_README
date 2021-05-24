@@ -120,12 +120,12 @@ node{
 7. Docker —version
 
 ## Dockerfile :
-FROM ubuntu:latest
-MAINTAINER Sahiti (email@domain.com)
-RUN apt-get update
-RUN apt-get install -y nginx
-ENTRYPOINT ["/usr/sbin/nginx","-g","daemon off;"]
-EXPOSE 80
+1. FROM ubuntu:latest
+2. MAINTAINER Sahiti (email@domain.com)
+3. RUN apt-get update
+4. RUN apt-get install -y nginx
+5. ENTRYPOINT ["/usr/sbin/nginx","-g","daemon off;"]
+6. EXPOSE 80
 
 Build the image : docker build .
 
@@ -164,10 +164,10 @@ Docker ru -itd ubuntu:latest
 Docker attach <container_id>
 
 ## To Start and Stop a container
-Docker start < container_id>
-Docker stop <container_id>
-Docker pause <container_id>
-Docker unpause <container_id>
+1. Docker start < container_id>
+2. Docker stop <container_id>
+3. Docker pause <container_id>
+4. Docker unpause <container_id>
 
 ## Specify resources to a docker container
 Docker run -it —memory=“128M” —cpus=“1.0”
