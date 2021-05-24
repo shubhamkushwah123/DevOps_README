@@ -59,27 +59,26 @@ java -jar agent.jar -jnlpUrl http://ec2-18-217-44-60.us-east-2.compute.amazonaws
 5. Usermod -aG sudo <username>
 #Add Jenkins to sudo group
 6. Usermod -aG sudo Jenkins
-# make Jenkins to execute scripts with no password
-6. Put in sudoers.d/jenkins
+## Make Jenkins to execute scripts with no password
+7. Put in sudoers.d/jenkins
 jenkins ALL=(ALL) NOPASSWD:ALL
 
 
 # Setting up selenium in Ubuntu
 
-1. Install Chrome : 
-sudo curl -sS -o - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add
-sudo echo "deb [arch=amd64]  http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list
-sudo apt-get -y update
-sudo apt-get -y install google-chrome-stable
+- Install Chrome : 
+1. sudo curl -sS -o - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add
+2. sudo echo "deb [arch=amd64]  http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list
+3. sudo apt-get -y update
+4. sudo apt-get -y install google-chrome-stable
 
-2. Install Chrome Driver
+- Install Chrome Driver
 
-wget https://chromedriver.storage.googleapis.com/88.0.4324.96/chromedriver_linux64.zip
-unzip chromedriver_linux64.zip
+5. wget https://chromedriver.storage.googleapis.com/88.0.4324.96/chromedriver_linux64.zip
+6. unzip chromedriver_linux64.zip
 
 
-******************************Run Selenium********************************
-Steps : 
+# Steps to run selenium
 
 1. Complete the CICD pipeline for address book project and ensure it is running on server.
 2. Create a new maven project for Selenium.
@@ -92,7 +91,7 @@ Note :
 1. ensure —headless argument is added while running on ubuntu
 2. Ensure that Jenkins user have given admin rights.
 
-*****************************Selenium Pipeline Job*********************************
+# Selenium Pipeline Job
 node{
     stage('git checkout'){
        sh 'mvn clean'
@@ -111,17 +110,17 @@ node{
 }
 
 
-**********************************Install docker *************************************
-Sudo su
-Apt update
-Apt install -y docker
-Systemctl start docker
-Systemctl status docker
-Systemctl stop docker
-Docker —version
+# Docker Installation 
+1. Sudo su
+2. Apt update
+3. Apt install -y docker
+4. Systemctl start docker
+5. Systemctl status docker
+6. Systemctl stop docker
+7. Docker —version
 
-
-Dockerfile :  FROM ubuntu:latest
+## Dockerfile :
+FROM ubuntu:latest
 MAINTAINER Sahiti (email@domain.com)
 RUN apt-get update
 RUN apt-get install -y nginx
@@ -132,7 +131,7 @@ Build the image : docker build .
 
 Run the image : docker run -itd -p 8002:80 shubhamkushwah123/nginx:1.0
 *************************************************************************************
-Docker Commands
+## Docker Commands
 
 Docker version
 Docker build .
@@ -155,27 +154,27 @@ Exit to come out from an attached container
 Attaching a container terminal again to interactive after coming out of it.
 1. Docker exec -it <container_id> /bin/bash
 
-#Removing Container : 
+## Removing Container : 
 Docker rm -f <container_id>
 
-#To run container with -itd
+## To run container with -itd
 Docker ru -itd ubuntu:latest
 
-#Attaching the terminal(standard input/output to the container)
+## Attaching the terminal(standard input/output to the container)
 Docker attach <container_id>
 
-#To Start and Stop a container
+## To Start and Stop a container
 Docker start < container_id>
 Docker stop <container_id>
 Docker pause <container_id>
 Docker unpause <container_id>
 
-# Specify resources to a docker container
+## Specify resources to a docker container
 Docker run -it —memory=“128M” —cpus=“1.0”
 
 
-************Running Tomcat ***************
-Docker run -itd tomcat:latest
-Docker run -p 20000:8080 —name=my-tomcat tomcat:latest
-Docker run -itd -p 20000:8080 —name=my-tomcat1 tomcat:latest
-Docker run -itd -P —name=my-tomcat2 tomcat:latest
+## Running tomcat as docker container
+1. Docker run -itd tomcat:latest
+2. Docker run -p 20000:8080 —name=my-tomcat tomcat:latest
+3. Docker run -itd -p 20000:8080 —name=my-tomcat1 tomcat:latest
+4. Docker run -itd -P —name=my-tomcat2 tomcat:latest
