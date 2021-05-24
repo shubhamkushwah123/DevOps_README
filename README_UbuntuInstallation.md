@@ -127,9 +127,11 @@ node{
 5. ENTRYPOINT ["/usr/sbin/nginx","-g","daemon off;"]
 6. EXPOSE 80
 
-Build the image : docker build .
+## Build the image : 
+docker build .
 
-Run the image : docker run -itd -p 8002:80 shubhamkushwah123/nginx:1.0
+## Run the image : 
+docker run -itd -p 8002:80 shubhamkushwah123/nginx:1.0
 *************************************************************************************
 ## Docker Commands
 
@@ -146,12 +148,12 @@ Docker run —name my-containewr ubuntu
 Hostname -I
 Hostname -a / hostname -f
 
-Exit to come out from an attached container
+## Exit to come out from an attached container
 -i : interactive = exit to come out CTRL+P+Q
 -t : terminal  - CTRL+P+Q to come out
 -d: detached – stop containerid to stop container
 
-Attaching a container terminal again to interactive after coming out of it.
+## Attaching a container terminal again to interactive after coming out of it.
 1. Docker exec -it <container_id> /bin/bash
 
 ## Removing Container : 
