@@ -1,31 +1,29 @@
-Maven project archetype : 
+# Maven project archetype : 
 
 mvn archetype:generate -DgroupId=com.edureka.app -DartifactId=maven-demo -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false
 
-****
-Jenkins installation on ubuntu
 
-    1. Sudo apt update
-    2. Sudo apt install default-are
-    3. Sudo apt install maven
-    4. Sudo  wget -q -O - https://pkg.jenkins.io/debian/jenkins.io.key | sudo apt-key add -
-	 5. sudo sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
+# Jenkins installation on ubuntu
+
+   1. Sudo apt update
+   2. Sudo apt install default-are
+   3. Sudo apt install maven
+   4. Sudo  wget -q -O - https://pkg.jenkins.io/debian/jenkins.io.key | sudo apt-key add -
+   5. sudo sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
    6. Sudo apt update
    7. Sudo apt install Jenkins
    8. Sudo sytemctl status Jenkins
    9. Sudo systemctl start Jenkins
+  10. Goto the url - http://<IP address> : 8080/ as Jenkins runs on port 8080.
+  11. sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 
-Goto the url - http://<IP address> : 8080/ as Jenkins runs on port 8080.
-
-sudo cat /var/lib/jenkins/secrets/initialAdminPassword
-
-#Email Notification :   Do all these steps, otherwise the error will persists.
+# Email Notification :   Do all these steps, otherwise the error will persists.
 -You must have to log into just one gmail account (the one you are using to send email).
 -Then go to https://www.google.com/settings/security/lesssecureapps and Turn On this feature.
 -And last go to https://accounts.google.com/DisplayUnlockCaptcha and click Continue.
 
 
-#Jenkins download agent.jar
+# Jenkins download agent.jar
 wget http://ec2-3-22-234-221.us-east-2.compute.amazonaws.com:8080/jnlpJars/slave.jar
 
 
@@ -35,48 +33,38 @@ java -jar agent.jar -jnlpUrl http://ec2-18-217-44-60.us-east-2.compute.amazonaws
 
 
 
-**********************Intall tomcat ***********************************
-Apt update
-Apt install tomcat9
-Apt install tomcat9-admin
-
-Configure user in /var/lib/tomcat9/conf/tomcat-users.xml
-
-<role rolename="manager-script"/>
+# Install Tomcat 9
+1. Apt update
+2. Apt install tomcat9
+3. Apt install tomcat9-admin
+4. Configure user in /var/lib/tomcat9/conf/tomcat-users.xml
+    <role rolename="manager-script"/>
     <role rolename="manager-jmx"/>
     <role rolename="manager-gui"/>
     <role rolename="manager-status"/>
-
     <user username="tomcat" password="password" roles="manager-gui, manager-status, manager-jmx, manager-script"/>
-
-Configure http port  from 8080 to 8888 in /var/lib/tomcat9/conf/server.xml
-
-Systemctl status tomcat9
-
-Systemctl start tomcat9
+5. Configure http port  from 8080 to 8888 in /var/lib/tomcat9/conf/server.xml
+6. Systemctl status tomcat9
+7. Systemctl start tomcat9
 
 
-*************************Setting up User******************************
+# ***********Setting up User************
 
 #Changing root password :
 1. Sudo su
 2. Passed root
-
 #Creating new User
-1. Adduser <username>
-
+3. Adduser <username>
 #Add user to Sudo group
-1. Usermod -aG sudo <username>
-
+5. Usermod -aG sudo <username>
 #Add Jenkins to sudo group
-1. Usermod -aG sudo Jenkins
-
+6. Usermod -aG sudo Jenkins
 # make Jenkins to execute scripts with no password
-Put in sudoers.d/jenkins
+6. Put in sudoers.d/jenkins
 jenkins ALL=(ALL) NOPASSWD:ALL
 
 
-*****************Setting up selenium in Ubuntu********************
+# Setting up selenium in Ubuntu
 
 1. Install Chrome : 
 sudo curl -sS -o - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add
