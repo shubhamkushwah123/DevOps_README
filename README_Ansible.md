@@ -86,3 +86,52 @@ To Install Boto3
   
 this will create an ec2 instance for us and install the necessary softwares like docker.
  
+ 14 Create another ansible playbook to install softwares.
+ 
+ > vi install-playbook.yml
+ ```bash
+---
+- hosts: all
+  become: true
+  tasks:
+  - name: install maven
+    apt:
+      pkg: maven
+      state: present
+    notify:
+    - run update
+  - name: install tomcat
+    apt:
+      pkg: tomcat9
+      state: present
+  - name: uninstall git
+    apt:
+      pkg: git
+      state: absent
+  - name: start tomcat service
+    service:
+      name: tomcat9
+      state: started
+      enabled: true
+  - name: install docker
+    apt:
+      pkg: docker.io
+      state: present
+  - name: start docker service
+    service:
+      name: docker
+      state: started
+      enabled: true
+  - name: run docker image
+    command: sudo docker run -it -d -p 8085:8080 shubhamkushwah123/addressbook:1.0    
+  handlers: 
+  - name: run update
+    apt:
+      update_cache: yes
+```
+ 15 To run the ansible playbook, execute below command.
+ 
+ > ansible-playbook install-playbook.yml
+  
+this will install all the requested software and deploy the docker application on the nodes.
+ 
