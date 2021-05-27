@@ -53,6 +53,31 @@ To Install Boto3
 > aws_access_key_id=Access key provided by AWS
 
 > aws_secret_access_key=Access key secret provided by AWS
+ 
+ # Installation on Amazon EC2 - Ubuntu 18.04 LTS - execute the below command in sequence.
+  ```bash
+    >  scp -i <pem file>  <source pem file to to copied to master node> ubuntu@<ip of the master>:/home/ubuntu/
+    >  ssh -i <pem file> ubuntu@<ip of the master node>
+    >  sudo hostnamectl set-hostname master
+    >  bash
+    >  sudo service ssh start
+    >  eval `ssh-agent -s`
+    >  chmod 400 devops-ec2.pem 
+    >  ssh-add devops-ec2.pem 
+    >  ssh ubuntu@<private ip of node>
+    >  ls -al
+    >  sudo vi .bashrc. 
+    -  add eval `ssh-agent -s` and ssh-add devops-ec2.pem towards the last of the file] [passsord less authentication]
+    >  exit
+    >  ssh ubuntu@172.31.37.230
+    >  sudo apt update
+    >	 sudo apt-add-repository ppa:ansible/ansible 
+    >  sudo apt install ansible
+    >  ansible --version
+    >  sudo vi /etc/ansible/hosts 
+    -  add the private IP address of the slave node in the last]
+    >  ansible -m ping all
+  ```
 
 # Ansible Playbooks 
  11. Go to the directory /etc/ansible/
