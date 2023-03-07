@@ -48,7 +48,11 @@ cd <directory name>
 ```bash
  git status  
  ```
-
+>To create a new file-
+```bash
+Syntax-touch <filename.type>
+-->touch about.html/touch about.txt
+```
 
 > To configure the global username and email id
 
@@ -65,6 +69,11 @@ cd <directory name>
  ```bash
  git remote add origin <ssh url>
  git remote add origin https://github.com/shubhamkushwah123/DevOps.git
+
+here,
+      remote is used for linking the url
+      add is used to add
+      origin-name of the url.By convention it is "origin" but it can be anything like origin2,rohit,etc.
 ```
  
 > To Clone a remote git repository into a local git repository.
@@ -93,6 +102,10 @@ git branch
 > To create a new branch
 ```bash
 git branch $branchName
+```
+> To switch between branches
+```bash
+git checkout $branchname
 ```
 
 > To delete an existing branch 
